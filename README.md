@@ -1,4 +1,4 @@
-This is a slot machine I built to practice JavaScript
+This is a slot machine I built to practice JavaScript: https://cderose.github.io/sitcom-slots/
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
