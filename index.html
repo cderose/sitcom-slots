@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sitcom Slots</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Sitcom Slots</h1>
+
+  <div class="instruction-column column">
+    <h2>Scoring Guide</h2>
+    <p class="instructions">Get three matching symbols or </br> the show logo to score. </br> Three logos activate a bonus, </br> where you can find Jellybean!</p>
+    <table>
+      <tr>
+        <th>Jellybean</th>
+        <th>Three Logos</th>
+        <th>Two Logos</th>
+        <th>One Logo</th>
+      </tr>
+      <tr>
+        <td>500</td>
+        <td>100</td>
+        <td>50</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th>Rob</th>
+        <th>Laura</th>
+        <th>Sally</th>
+        <th>Buddy</th>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>30</td>
+        <td>15</td>
+        <td>15</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="slot-column column">
+    <p id="spin-text">Spin for a chance to win!</p>
+    <p id="bonus-text">Find Jellybean! </br> Clicks remaining: 3</p>
+    <div class="container">
+      <div id="carousel-wrapper">
+
+<!-- originally 6, but added more logos to increase odds of bonus-->
+        <div id="group1" class="carousel" data-state="1">
+          <figure><image src='images/dvd-logo.png'></figure>
+          <figure><image src='images/dvd-rob.png'></figure>
+          <figure><image src='images/dvd-laura.png'></figure>
+          <figure><image src='images/dvd-logo.png'></figure>
+          <figure><image src='images/dvd-buddy.png'></figure>
+          <figure><image src='images/dvd-sally.png'></figure>
+          <figure><image src='images/dvd-logo.png'></figure>
+        </div>
+
+        <div id="group2" class="carousel" data-state="1">
+          <figure><image src='images/dvd-laura.png'></figure>
+          <figure><image src='images/dvd-logo.png'></figure>
+          <figure><image src='images/dvd-rob.png'></figure>
+          <figure><image src='images/dvd-buddy.png'></figure>
+          <figure><image src='images/dvd-sally.png'></figure>
+          <figure><image src='images/dvd-logo.png'></figure>
+          <figure><image src='images/dvd-logo.png'></figure>
+        </div>
+
+        <div id="group3" class="carousel" data-state="1">
+          <figure><image src='images/dvd-rob.png'></figure>
+          <figure><image src='images/dvd-sally.png'></figure>
+          <figure><image src='images/dvd-logo.png'></figure>
+          <figure><image src='images/dvd-buddy.png'></figure>
+          <figure><image src='images/dvd-sally.png'></figure>
+          <figure><image src='images/dvd-laura.png'></figure>
+          <figure><image src='images/dvd-logo.png'></figure>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="bonus-container">
+    <div class="row">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+    </div>
+    <div class="row">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+      <img src="images/jellybean-cover.png" class="bonus-images" alt="">
+    </div>
+    </div>
+
+    <p id="score">Score = 0</p>  
+    <button id="button" type="button" name="button">SPIN</button>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+</body>
+
+</html>

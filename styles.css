@@ -1,0 +1,192 @@
+body { 
+  background-color: #8FCDDD;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  margin: 20px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: black;
+  font-size: 6rem;
+}
+
+h2, p {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 50px 0 50px;
+}
+
+img {
+  height: 120px;
+  width: 120px;
+}
+
+table {
+  border-spacing: 15px 10px;
+  margin: auto;
+}
+
+th {
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+td {
+  width: 20px;
+  text-align: center;
+  padding: 3px;
+}
+
+.instructions {
+  display: block;
+  font-size: 1.5rem;
+  margin: 0 0 20px;
+}
+
+/****************** PAGE LAYOUT *******************/
+
+.instruction-column {
+  display: inline-block;
+  width: 40%;
+}
+
+.slot-column {
+  float: right;
+  width: 60%;
+}
+
+@media screen and (max-width: 930px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/****************** SLOT LAYOUT *******************/
+.container {
+  position: relative;
+  background-color: grey;
+  margin: auto;
+  height: 300px;
+  width: 600px;
+}
+
+#carousel-wrapper {
+  position: absolute;
+  top: 32%;
+  width: 100%;
+  text-align: center;
+  perspective: 1100px;
+}
+
+#group1 {
+  position: absolute;
+  left: -25%;
+}
+
+#group2 {
+  position: absolute;
+  left: 1%;
+}
+
+#group3 {
+  position: absolute;
+  left: 27%;
+}
+
+#carousel-wrapper,
+.carousel figure {
+  height: 100px;
+  line-height: 100px;
+  color: white;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+.carousel figure {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  font-size: 80px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  opacity: .2;
+  transition: all 1s;
+  backface-visibility: hidden;
+}
+
+/****************** SLOT ANIMATION *******************/
+/* target every figure element that is the nth element of its parent */
+/* rotate element at x-axis at given degree */
+/* change point of connection between elements with translateZ - originally set to 86px */
+.carousel figure:nth-of-type(1) {-webkit-transform: rotateX(0deg)   translateZ(96px);}
+.carousel figure:nth-of-type(2) {-webkit-transform: rotateX(60deg)  translateZ(96px);}
+.carousel figure:nth-of-type(3) {-webkit-transform: rotateX(120deg) translateZ(96px);}
+.carousel figure:nth-of-type(4) {-webkit-transform: rotateX(180deg) translateZ(96px);}
+.carousel figure:nth-of-type(5) {-webkit-transform: rotateX(240deg) translateZ(96px);}
+.carousel figure:nth-of-type(6) {-webkit-transform: rotateX(300deg) translateZ(96px);}
+
+/* keep only front image in focus */
+.carousel[data-state="1"] figure:nth-of-type(1),
+.carousel[data-state="2"] figure:nth-of-type(2),
+.carousel[data-state="3"] figure:nth-of-type(3),
+.carousel[data-state="4"] figure:nth-of-type(4),
+.carousel[data-state="5"] figure:nth-of-type(5),
+.carousel[data-state="6"] figure:nth-of-type(6) { opacity: 1; }
+
+
+
+/**************** BONUS GAME *******************/
+#bonus-container {
+  display: none;
+  position: relative;
+  background-color: grey;
+  margin: auto;
+  height: 300px;
+  width: 600px;
+}
+
+.bonus-images {
+  height: 60px;
+  width: 120px;
+  display: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.revealed-images {
+  height: 120px;
+  width: 60px;
+  display: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+#bonus-text {
+  display:none;
+}
+
+/****************** BUTTON *******************/
+#button {
+  background-color: #F2F2F2;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  margin-left: 15px;
+  outline: none;
+  height: 55px;
+  width: 115px;
+}
+
+#button:hover {
+  background-color: #CCCCCC;
