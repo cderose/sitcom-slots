@@ -1,4 +1,4 @@
-This is an in-progress slot machine game I'm building to practice JavaScript
+This is a slot machine I'm built to practice JavaScript
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
